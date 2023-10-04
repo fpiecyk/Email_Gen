@@ -1,0 +1,17 @@
+
+{% extends 'base.html'%}
+
+{% block title %}
+    Email output
+{% endblock title %}
+
+
+{% block content %}
+    <h2>Your email address is below:</h2>
+    <h3>{{email}}</h3>
+    <p>
+        <button type="submit" class="send">
+            <a href="{% url 'home' %}">Home page</a>
+        </button>
+    </p>
+{% endblock content%}

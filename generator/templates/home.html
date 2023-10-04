@@ -1,0 +1,40 @@
+
+{% extends 'base.html'%}
+
+{% block title %}
+    Email generator
+{% endblock title %}
+
+
+{% block content %}
+<h1>E-mail generator</h1>
+<form action="{% url 'email' %}" method="post">
+    <p>
+        <select name="domain" required>
+            <option value="gmail.com" selected>Gmail</option>
+            <option value="wp.pl">Wirtualna Polska</option>
+            <option value="op.pl">Onet</option>
+            <option value="buziaczek.pl">Buziaczek</option>
+        </select>
+    </p>        
+    <p>
+        <select name="length" required>
+            <option value="" selected disabled>Length</option>
+            <option value="7">7 letters</option>
+            <option value="8">8 letters</option>
+            <option value="9">9 letters</option>
+            <option value="10">10 letters</option>
+        </select>
+    </p>
+    <p>
+        <input type="checkbox" name="numeric" id="nums">
+        <label for="nums">Numbers</label>
+    </p>
+    <p>
+        {% csrf_token %}
+        <button type="submit" class="send">Generate e-mail</button>
+    </p>
+</form>
+
+
+{% endblock content%}

@@ -1,0 +1,20 @@
+body {
+    background-color: lightblue;
+    font-family: verdana;
+  }
+
+h1, h2, h3, p {
+    text-align: center;
+}
+
+.send {
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
